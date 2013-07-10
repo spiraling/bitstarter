@@ -1,6 +1,7 @@
 var express = require('express');
 
-var app = express.createServer(express.logger());
+var app = express.createServer(express.logger()),
+    fs = require('fs');
 
 app.get('/', function(request, response) {
 	var content = fs.readFileSync(index.html);
